@@ -1,0 +1,73 @@
+---
+layout: default
+<!--header_class: alt-->
+
+---
+
+
+{% comment %}
+
+	Slate by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Home page
+
+	Description:
+
+		Site home page.
+
+{% endcomment %}
+
+{% include components/banner.html customtag="slider-home-main" darkback=true %}
+
+<!-- One -->
+	<section id="one" class="wrapper content-pad">
+		<div class="inner">
+                    <section class="spotlight-flip">
+				<div class="content">
+                                    <h2>Experience the many benefits of authentic experienced Tai Chi teaching.</h2>
+                                    <p>If something is getting in the way of you living your life, now is probably the best time to do something about it.<br>
+                                        Every day, practising Tai Chi has a profoundly positive effect on millions of people the world over. Health wise it provides relief and freedom to people of all ages, with all kinds of physical and emotional concerns. Emotionally it helps us calm ourselves. Spiritually it grounds us and can It is a genuinely remarkable form of treatment, safe, minimal and gentle but with long-lasting and wide-ranging effects; even after many years of practise I am still becoming more inspired by what it can do for us.
+                                    </p>
+                                    <blockquote class="emph">
+                                        We would love for you to benefit from Tai Chi. It is a really wonderful form of exercise. I really hope you will take the small step to get in touch now so you can explore what it can do for you. </blockquote>
+ 
+    <ul class="actions">
+            <li><a href="/how-to-book.html" class="button">Book Here</a></li>
+            <li><a href="#contact-trigger" class="button">Contact Us</a></li>
+            <li><a href="#three" class="button">Benefits of Tai Chi</a></li>
+    </ul>  
+                                        
+				</div>
+				<span class="content content-minor"> {% include components/testimonials.html  %}</span>
+                    </section>
+		</div>
+	</section>
+
+<!-- Two -->
+	<section id="two" class="wrapper content-pad">
+		<div class="inner">
+			{% include components/features.html features=page.features width="" %}
+		</div>
+	</section>
+
+<!-- three -->
+	<section id="three" class="wrapper style2">
+		<div class="inner">
+			{% include components/navtiles.html customtag="tiles-home" title="Benefots of Tai chi" navtiles_paragraph=page.navtiles_paragraph %}
+		</div>
+	</section>
+
+
+{% comment %}
+<!-- four -->
+        <section id="four" class="wrapper style2">
+		<div class="inner">
+			<h2>Latest Blogs</h2>
+			{% include components/posts.html posts=page.posts %}
+		</div>
+	</section>
+{% endcomment %}

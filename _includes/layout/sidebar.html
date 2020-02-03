@@ -1,0 +1,39 @@
+{% comment %}
+
+	Slate by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Sidebar
+
+	Description:
+
+		Generates the sidebar content.
+
+	Example:
+
+		{% include layout/sidebar.html %}
+
+{% endcomment %}
+
+<!-- Sidebar -->
+	<div class="sidebar">
+
+		{% capture tagvar %}{{page.testimonialtagvar}}{% endcapture %}
+                        {% include components/testimonials.html customtag=tagvar%}
+			
+		<hr />
+		<section>
+                    <h2>Expertise and Standards</h2>
+			<a href="/about-me/professional-standards.html" class="image fit"><img src="{{ site.baseurl }}/images/uploads/BAcC_Member_Pos_RGB.png" alt="British Acupuncture Council Member Logo" /></a>
+			
+                        <p>I am a <b>full member of the British Acupuncture Council(BAcC)</b><br/> The BAcC is the UK's foremost body governing authentic Traditional Acupuncturists, membership confirms that I have completed degree level training, work to the highest standards of practise and engage in continual professional learning .<br/> <b>BAcC Member No.:  960470 </b> </p>
+			<footer>
+				<ul class="actions">
+					<li><a href="/about-me/professional-standards.html" class="button small">Learn More</a></li>
+				</ul>
+			</footer>
+		</section>
+	</div>

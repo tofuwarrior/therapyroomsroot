@@ -1,0 +1,138 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Rising Phoenix Tai Chi Website based on Jekyll Netlify Boilerplate & Pixelarity Slate template
+email: info@shibashi.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml.
+baseurl: "" # the subpath of your site if applicable, e.g. /blog
+url: "https://jekyll-netlify-boilerplate.netlify.com" # the base hostname & protocol for your site, e.g. https://example.com
+
+# Plugins
+plugins: ["jekyll-paginate"]
+
+# Permalink format (/blog/ is ignored for pages)
+permalink: /blog/:title
+
+# Enable section IDs in frontmatter, useful for identifying current page
+# (used as a hook for styling etc)
+section: true
+
+# set to 'true' to enable Netlify CMS (/admin) in production builds
+netlifycms: true
+
+# set to 'true' to enable Google Analytics tracking code in production builds
+analytics: false
+
+include: ["_redirects"]
+
+google:
+  tag_manager:
+    container_id: PMQNS5G
+
+
+
+# Compress HTML (in liquid via layouts/compress.html)
+compress_html:
+  clippings: all
+
+# set some common post defaults
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post" # set the correct default template for a post
+      section: "post" # set the root section name
+
+# Build settings
+markdown: kramdown
+style: compressed
+sass:
+  sass_dir: assets/sass
+
+# Kramdown options
+kramdown:
+  # Prevent IDs from being added to h1-h6 tags
+  auto_ids: false
+
+# Include in processing (e.g. Netlify directives)
+# Uncomment before use
+
+#include:
+#  - _redirects
+#  - _headers
+
+# Exclude from processing.
+# The following items will not be processed.
+exclude:
+  - README.md
+  - LICENSE.txt
+  - netlify.toml
+  - feed.xml
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+
+
+collections:
+    posts:
+        output: true
+    pages:
+        output: true
+    navtiles:
+        output: false
+    bannerslides:
+        output: false
+    posttiles:
+        output: false
+    features:
+        output: false
+    customtags:
+        output: false
+    testimonials:
+        output: false  
+        
+#twitter:
+#  username: csacupuncture
+#  card: summary
+#facebook:
+#  app_id: 1234
+#  publisher: 1234
+#  admins: 1234  
+#social:
+#  name: Clear Spring Acupuncture
+#  links:
+#    - https://twitter.com/csacupuncture
+#    - https://www.facebook.com/clearspringacupuncture
+    
+webmaster_verifications:
+#  google: 
+#  bing: 1234
+#  alexa: 1234
+  
+title: Tai chi & Qi Gong in Cardiff - Rising Phoenix Tai chi - Experienced, Authentic Teaching
+description: Tai Chi promotes contentment, happiness and good health. 
+  Come along and try it out, all of our classes are friendly and welcoming.
+url: https://www.shibashi.com
+author: Rising Phoenix Tai Chi
+lang: en

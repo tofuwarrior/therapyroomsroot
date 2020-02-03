@@ -1,0 +1,94 @@
+{% comment %}
+
+	Slate by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Site header
+
+	Description:
+
+		Site header and navigation.
+		Set "header_class" to "alt" in the page frontmatter
+		to blend the header with the page.
+
+	Example:
+
+		{% include layout/header.html %}
+
+{% endcomment %}
+
+<!-- Header -->
+	<header id="header" class="{{ include.class }}">
+           
+		<h1><a href="{{ site.baseurl }}/">
+                         {% include components/logo-horizontal.html %}
+		</a></h1>
+		<nav id="nav">
+			<ul>
+                            <li><a href="{{ site.baseurl }}/" >Home</a>
+                             
+                                   
+                            </li>
+                            <li>
+                                    <a href="/what-we-teach/"  class="submenu fa-angle-down">What We Teach</a>
+                                    <ul>
+                                            <li><a href="/what-we-teach/">Overview</a></li>
+                                            <li><a href="/what-we-teach/tai-chi.html">Tai Chi</a></li>
+                                            <li><a href="/what-we-teach/qi-gong.html">Qi Gong</a></li>
+                                            <li><a href="/what-we-teach/shibashi.html">Shibashi</a></li>
+                                            <li><a href="/what-we-teach/eight-pieces-of-brocade.html">8 Pieces of Brocade</a></li>
+                                           
+                                    </ul>
+                            </li>
+                            <li>
+                                <a href="/about-us/" class="submenu fa-angle-down">About Us</a>
+                                    <ul>
+                                         <li><a href="/about-us/">Introduction</a></li>
+                                         <li><a href="/about-us/biography.html">About Christie</a></li>
+                                        <li><a href="/about-us/cheng-man-ching.html">Cheng Man Ching</a></li>
+                                        <li><a href="/about-us/dr-chi.html">Dr Chi</a></li>
+                                        <li><a href="/about-us/dr-shen-hongxun.html">Dr Shen Hongxun</a></li>
+                                        <li><a href="/about-us/tt-liang.html">TT Liang</a></li>
+                                        <li><a href="/about-us/testimonials.html">Testimonials</a></li>
+                                        <li><a href="/about-us/professional-standards.html">Professional Standards</a></li>
+                                        <li><a href="/about-us/insurance.html">Insurance</a></li>
+                                    </ul>
+                            </li>
+                             <li><a href="/about-tai-chi/" class="submenu  fa-angle-down">About Tai Chi</a>
+                                <ul>
+                                    <li><a href="/about-tai-chi/" >Index</a>  </li>
+                                    <li><a href="/about-tai-chi/tai-chi-as-meditation.html" >Tai Chi as Meditation</a>  </li>
+                                    <li><a href="/about-tai-chi/tai-chi-as-a-martial-art.html" >Tai Chi as a Martial Art</a>  </li>
+                                    <li><a href="/about-tai-chi/principles-of-tai-chi.html" >Principles of Tai Chi</a>  </li>
+                                    <li><a href="/about-tai-chi/yin-and-yang.html" >Yin and Yang</a>  </li>
+                                    <li><a href="/about-tai-chi/what-is-chi.html" >What is Chi?</a>  </li>
+                                    <li><a href="/about-tai-chi/water-tai-chi-classics.html" >Water Tai chi Classics</a>  </li>
+                                    <li><a href="/about-tai-chi/recommended-reading.html" >Recommended Reading</a>  </li>
+                                    <li><a href="/about-tai-chi/commentaries-on-tai-chi-classics.html" >Commentaries on Tai Chi Classics</a>  </li>
+                                </ul>
+                            </li>
+                            
+                             <li><a href="/benefits-of-tai-chi/" class="submenu  fa-angle-down">Benefits</a>
+                                <ul>
+                                    <li><a href="/benefits-of-tai-chi/" >Overview</a>  </li>
+                                    <li><a href="/benefits-of-tai-chi/health.html" >Health</a>  </li>
+                                    <li><a href="/benefits-of-tai-chi/relaxation.html" >Relaxation</a>  </li>
+                                    <li><a href="/benefits-of-tai-chi/confidence.html" >Confidence</a>  </li>
+                                </ul>
+                            </li>
+                             <li><a href="/workplace-tai-chi/" class="submenu  fa-angle-down">Workplace</a>
+                                <ul>
+                                    <li><a href="/workplace-tai-chi/" >Overview</a></li>
+                                    <li><a href="/workplace-tai-chi/workplace-services.html" >Workplace Services</a>  </li>
+                                    <li><a href="/workplace-tai-chi/our-clients.html" >Our Clients</a>  </li>
+                                </ul>
+                            </li>
+                            <li><a href="/common-questions.html">Classes</a></li>
+                            <li><a href="#contact-trigger" class="contact-trigger">Contact</a></li>
+                            <!--<li><a href="{{ site.baseurl }}/blog">Blog</a></li>-->
+			</ul>
+		</nav>
+	</header>

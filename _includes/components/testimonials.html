@@ -1,0 +1,31 @@
+{% comment %}
+		{% include layout/testimonials.html %}
+{% endcomment %}
+
+<h2>What Patients Say <small>(click images to enlarge)</small></h2>
+
+
+<section id="testimonials" class="slider"  data-featherlight-gallery      data-featherlight-filter="article">
+        {% for testimonial in site.testimonials %}
+            <article data-position="top" class="testimonial" data-featherlight="{{ testimonial.image }}">
+                {% capture thumbsize %}{{ testimonial.thumb | size }}{% endcapture %}
+                    <img src="{% if thumbsize == "0" %}{{testimonial.image}}{% else %}{{testimonial.thumb}}{% endif %}?nf_resize=fit&w=450" title ="{{ testimonial.excerpt | strip_html}}" >
+            </article>
+        {% comment %}
+         {% if testimonial.showexcerpt %}
+                                <div class="wrapper   {% if testimonial.darkback %}dark{%endif%}">
+                                     <blockquote>{{ testimonial.age | remove: "<p>" | remove: "</p>" }} year old, {{ testimonial.gender | remove: "<p>" | remove: "</p>" }}</blockquote>
+                                     <i>{{ testimonial.excerpt | truncate: 200}} </i>
+                                 </div>
+                        {% endif %}
+                        {% endcomment %}
+        {% endfor %}
+</section>
+<br><br>
+    <ul class="actions">
+            <li><a href="/what-patients-say.html" class="button">Click to view all...</a></li>
+    </ul>
+
+
+    
+    

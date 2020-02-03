@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+{% comment %}
+
+	Slate by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Testimonials layout
+
+	Description:
+
+		A layout where content is displayed alongside the sidebar.
+		Allows defining the sidebar orientation on each page.
+
+	Example:
+
+		---
+		layout: testimonials
+		---
+
+{% endcomment %}
+
+<section id="main" class="wrapper">
+		<div class="inner">
+
+<!-- Content -->
+	<header class="">
+		<div class="inner">   
+                    <h2> Testimonials</h2>
+                  {% include page-intro.html %}
+                </div>
+	</header>
+
+<h3> Reviews On Google </h3>
+<p>View live reviews on google by clicking the button below.<br/> (It can take a few seconds once the page has loaded for the reviews to load).</p>
+ <a class="button" href="https://goo.gl/QK3EJk" target="_blank">View reviews on google </a>.
+<hr/> 
+<h3> Messages I have Received <small>(click images to enlarge)</small></h3>
+<p>These are a selection of the message about treatment that I have received directly from patients.</p>
+<!-- gatewaytiles -->
+	<section id="testimonials-gallery" class="">
+            <div class="box alt">
+                <div class="row gtr-uniform gtr-50">
+        {% for testimonial in site.testimonials %}
+                    <div class="col-4 testimonial" data-featherlight="{{ testimonial.image }}">
+                 {% if testimonial.showexcerpt %}
+                    <h3>{{ testimonial.excerpt}}<small>{{ testimonial.age | remove: "<p>" | remove: "</p>" }} year old, {{ testimonial.gender | remove: "<p>" | remove: "</p>" }} </small></h3>
+                {% endif %} 
+                    {% capture thumbsize %}{{ testimonial.thumb | size }}{% endcapture %}
+                    <span class="image fit"><img src="{% if thumbsize == "0" %}{{testimonial.image}}{% else %}{{testimonial.thumb}}{% endif %}" title ="{{ testimonial.excerpt | strip_html}}- {{ testimonial.age | remove: "<p>" | remove: "</p>" }} year old, {{ testimonial.gender | remove: "<p>" | remove: "</p>" }}" ></span>
+             </div>
+        {% endfor %}
+                </div>
+            </div>
+	</section>
+<!-- Main -->
+ {{content}}
+ 
+                </div>
+</section>
